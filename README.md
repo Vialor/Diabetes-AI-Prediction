@@ -3,8 +3,11 @@ https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database
 
 ## authors
 Siddharth Chandrasekaran Vaikuntam
+
 Siyu Miao
+
 Yushan Li
+
 Yiyang Zhou
 
 ## Description
