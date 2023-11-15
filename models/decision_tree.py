@@ -8,13 +8,12 @@ def decision_tree(X_train, y_train, X_test, y_test):
   depth_with_min_error = -1
 
   for index, max_depth in enumerate(max_depth_list):
-
-      decisiontree = DecisionTreeRegressor(max_depth = max_depth, min_samples_split = 2)
-      decisiontree.fit(X_train, y_train)
-      error = mean_absolute_error(y_test, decisiontree.predict(X_test))
-      if(error < min_test_error):
-        min_test_error = error
-        depth_with_min_error = max_depth_list[index]
+    decisiontree = DecisionTreeRegressor(max_depth = max_depth, min_samples_split = 2)
+    decisiontree.fit(X_train, y_train)
+    error = mean_absolute_error(y_test, decisiontree.predict(X_test))
+    if(error < min_test_error):
+      min_test_error = error
+      depth_with_min_error = max_depth_list[index]
 
   print("depth with min error: ", depth_with_min_error)
   print("min_error: ", min_test_error)

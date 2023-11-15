@@ -9,6 +9,7 @@ from sklearn.ensemble import RandomForestRegressor
 from constants import SPLIT_RATE
 # models import
 from models.decision_tree import decision_tree
+from models.k_nearest_neighbors import k_nearest_neighbors
 from models.linear_regression import linear_regression
 
 import warnings
@@ -33,5 +34,7 @@ match sys.argv[1]:
     decision_tree(X_train, y_train, X_test, y_test)
   case 'linear_regression':
     linear_regression(X_train, y_train, X_test, y_test)
+  case 'k_nearest_neighbors':
+    k_nearest_neighbors(X_train, y_train, X_test, y_test)
   case _:
     decision_tree(X_train, y_train, X_test, y_test)
